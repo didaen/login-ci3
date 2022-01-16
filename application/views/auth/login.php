@@ -43,7 +43,7 @@
                                             <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Enter Email Address...">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="password" placeholder="Password">
+                                            <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
