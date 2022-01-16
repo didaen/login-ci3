@@ -9,6 +9,11 @@ class Auth extends CI_Controller
     {
         // Memanggil method contructor CI_Controller
         parent::__construct();
+
+        //Library form_validation tidak dapat disimpan
+        // di application > config > autoload.php
+        // harus disimpan di method atau controller
+        $this->load->library('form_validation');
     }
     public function index()
     {
@@ -19,11 +24,6 @@ class Auth extends CI_Controller
 
     public function registration()
     {
-        //Library form_validation tidak dapat disimpan
-        // di application > config > autoload.php
-        // harus disimpan di method atau controller
-        $this->load->library('form_validation');
-
         $data['title'] = 'Physics Yourself Registration';
         $this->load->view('templates/auth_header', $data);
         $this->load->view('auth/registration');
