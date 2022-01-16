@@ -21,7 +21,7 @@
                                     <input type="password" class="form-control form-control-user" id="password1" name="password1" placeholder="Password">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+                                    <input type="password" class="form-control form-control-user" id="password2" name="password2" placeholder="Repeat Password">
                                 </div>
                             </div>
                             <a href="login.html" class="btn btn-primary btn-user btn-block">
