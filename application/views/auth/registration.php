@@ -24,7 +24,7 @@
                                     <input type="password" class="form-control form-control-user" id="password2" name="password2" placeholder="Repeat Password">
                                 </div>
                             </div>
-                            <button href="login.html" class="btn btn-primary btn-user btn-block">
+                            <button class="btn btn-primary btn-user btn-block">
                                 Register Account
                             </button>
                             <hr>
