@@ -16,8 +16,8 @@
                                 <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Email Address">
-                                <!-- Jika terdapat error untuk field name="email", tampilkan di sini -->
+                                <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Email Address" value="<?= set_value('email'); ?>>
+                                <!-- Jika terdapat error untuk field name=" email", tampilkan di sini -->
                                 <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
                             <div class="form-group row">
