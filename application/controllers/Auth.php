@@ -24,6 +24,10 @@ class Auth extends CI_Controller
 
     public function registration()
     {
+        //ATURAN-ATURAN TIAP FIELD
+        // 1. Name, required (tidak boleh kosong)
+        $this->form_validation->set_rules('name', 'required|trim');
+
         // Kondisi form_validation
         // Jika data gagal ditambahkan lakukan
         if ($this->form_validation->run() == false) {
