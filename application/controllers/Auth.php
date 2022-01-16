@@ -3,8 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Auth extends CI_Controller
 {
+    // Method contructor yaitu method default yang akan
+    // otomatis terpanggil saat controller Auth dipanggil
     public function __construct()
     {
+        // Memanggil method contructor CI_Controller
+        parent::__construct();
     }
     public function index()
     {
