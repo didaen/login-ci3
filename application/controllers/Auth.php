@@ -31,8 +31,6 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]');
         // 3. Password, required (tidak boleh kosong)
         $this->form_validation->set_rules('password1', 'Password', 'required|trim');
-        // 4. Repeat Password, required (tidak boleh kosong)
-        $this->form_validation->set_rules('password2', 'Repeat Password', 'required|trim');
 
         // Kondisi form_validation
         // Jika data gagal ditambahkan lakukan
