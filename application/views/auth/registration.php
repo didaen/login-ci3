@@ -13,7 +13,7 @@
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Full Name">
                                 <!-- Jika terdapat error untuk field name="name", tampilkan di sini -->
-                                <small class="text-danger pl-3"><?= form_error('name'); ?></small>
+                                <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Email Address">
