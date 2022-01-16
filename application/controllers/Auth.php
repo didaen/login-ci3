@@ -12,6 +12,7 @@ class Auth extends CI_Controller
 
     public function registration()
     {
+        $data['title'] = 'Physics Yourself Registration';
         $this->load->view('templates/auth_header');
         $this->load->view('auth/registration');
         $this->load->view('templates/auth_footer');
