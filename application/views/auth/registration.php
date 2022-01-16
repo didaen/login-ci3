@@ -12,6 +12,8 @@
                         <form class="user" method="post" action="<?= base_url('auth/registration'); ?>">
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Full Name">
+                                <!-- Jika terdapat error untuk field name="name", tampilkan di sini -->
+                                <?= form_error('name'); ?>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Email Address">
