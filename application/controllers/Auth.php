@@ -26,7 +26,7 @@ class Auth extends CI_Controller
     {
         //ATURAN-ATURAN TIAP FIELD
         // 1. Name, required (tidak boleh kosong)
-        $this->form_validation->set_rules('name', 'required|trim');
+        $this->form_validation->set_rules('name', 'Name', 'required|trim');
 
         // Kondisi form_validation
         // Jika data gagal ditambahkan lakukan
