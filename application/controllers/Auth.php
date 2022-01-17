@@ -46,7 +46,7 @@ class Auth extends CI_Controller
             $this->load->view('templates/auth_footer');
         } else {
             // Jika data berhasil ditambahkan
-            echo 'data berhasil ditambahakan!';
+            $data = [];
         }
     }
 }
