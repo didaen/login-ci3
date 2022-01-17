@@ -55,6 +55,8 @@ class Auth extends CI_Controller
                 'is_active' => 1,
                 'date_created' => time()
             ];
+
+            $this->db->insert('user', $data);
         }
     }
 }
