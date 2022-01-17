@@ -57,6 +57,7 @@ class Auth extends CI_Controller
             ];
 
             $this->db->insert('user', $data);
+            redirect('auth');
         }
     }
 }
