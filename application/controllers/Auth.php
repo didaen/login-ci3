@@ -47,7 +47,8 @@ class Auth extends CI_Controller
         } else {
             // Jika data berhasil ditambahkan
             $data = [
-                'name' => htmlspecialchars($this->input->post('name', true))
+                'name' => htmlspecialchars($this->input->post('name', true)),
+                'email' => htmlspecialchars($this->input->post('email', true))
             ];
         }
     }
