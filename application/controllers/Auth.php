@@ -61,7 +61,7 @@ class Auth extends CI_Controller
             $this->db->insert('user', $data);
             // Menampilkan pesan dulu sebelum redirect
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-            A simple success alert—check it out!
+            Congratulation! Your account has been created. Please login.
             </div>');
             redirect('auth');
         }
