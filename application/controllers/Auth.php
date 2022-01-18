@@ -50,7 +50,7 @@ class Auth extends CI_Controller
             // Jika data berhasil ditambahkan
             $data = [
                 'name' => htmlspecialchars($this->input->post('name', true)),
-                'email' => htmlspecialchars($this->input->post('email', true)),
+                'email' => htmlspecialchars($this->inpu t->post('email', true)),
                 'image' => 'default.jpg',
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
                 'role_id' => 2,
@@ -59,6 +59,8 @@ class Auth extends CI_Controller
             ];
 
             $this->db->insert('user', $data);
+            // Menampilkan pesan dulu sebelum redirect
+            $this->session->set_flashdata('message', '');
             redirect('auth');
         }
     }
