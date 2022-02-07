@@ -16,6 +16,11 @@
                                 <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
                             <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="nim" name="nim" placeholder="NIM" value="<?= set_value('nim'); ?>">
+                                <!-- Jika terdapat error untuk field name="name", tampilkan di sini -->
+                                <?= form_error('nim', '<small class="text-danger pl-3">', '</small>'); ?>
+                            </div>
+                            <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Email Address" value="<?= set_value('email'); ?>">
                                 <!-- Jika terdapat error untuk field name="email", tampilkan di sini -->
                                 <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
