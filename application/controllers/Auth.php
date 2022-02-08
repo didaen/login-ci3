@@ -28,16 +28,20 @@ class Auth extends CI_Controller
         //ATURAN-ATURAN TIAP FIELD
         // 1. Name, required (tidak boleh kosong)
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
-        // 2. Email, required (tidak boleh kosong)
+        // 2. NIM Optional
+        $this->form_validation->set_rules('nim', 'NIM', 'min_length[10]|is_unique[user.nim]', [
+            'min_length' => 'NIM is too short!'
+        ]);
+        // 3. Email, required (tidak boleh kosong)
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
             'is_unique' => 'Email has been used.'
         ]);
-        // 3. Password, required (tidak boleh kosong)
+        // 4. Password, required (tidak boleh kosong)
         $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[3]|matches[password2]', [
             'matches' => 'Passwords dont match!',
             'min_length' => 'Password is too short!'
         ]);
-        // 3. Repeat Password Password, required (tidak boleh kosong)
+        // 5. Repeat Password Password, required (tidak boleh kosong)
         $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
 
         // Kondisi form_validation
@@ -51,6 +55,7 @@ class Auth extends CI_Controller
             // Jika data berhasil ditambahkan
             $data = [
                 'name' => htmlspecialchars($this->input->post('name', true)),
+                'nim' => htmlspecialchars($this->input->post('nim', true)),
                 'email' => htmlspecialchars($this->input->post('email', true)),
                 'image' => 'default.jpg',
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
