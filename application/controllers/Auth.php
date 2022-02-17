@@ -17,10 +17,20 @@ class Auth extends CI_Controller
     }
     public function index()
     {
-        $data['title'] = 'Login Page';
-        $this->load->view('templates/auth_header', $data);
-        $this->load->view('auth/login');
-        $this->load->view('templates/auth_footer');
+        // Kondisi form_validation
+        // Jika user gagal melakukan login
+        if ($this->form_validation->run() == false) {
+
+            // User akan dikembalikan ke halaman views > auth > login.php
+            $data['title'] = 'Login Page';
+            $this->load->view('templates/auth_header', $data);
+            $this->load->view('auth/login');
+            $this->load->view('templates/auth_footer');
+        } else {
+
+            // Jika user berhasil login
+            echo 'Selamat datang';
+        }
     }
 
     public function registration()
